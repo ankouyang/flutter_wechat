@@ -1,0 +1,88 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_wechat/constants/constants.dart';
+import 'package:flutter_wechat/pages/chat/index.dart';
+import 'package:flutter_wechat/pages/contacts/index.dart';
+import 'package:flutter_wechat/pages/found/index.dart';
+import 'package:flutter_wechat/pages/personal/index.dart';
+
+class App extends StatefulWidget {
+  const App({Key? key}) : super(key: key);
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  // BottomNavigationBarItem
+  List<BottomNavigationBarItem>   bottomNavigationBarItem= [
+       BottomNavigationBarItem(
+           icon: Image.asset('assets/images/common-message.png',width: 20.0,height: 20.0),
+           activeIcon: Image.asset('assets/images/active-message.png',width: 20.0,height: 20.0),
+           label: '微信',
+       ),
+       BottomNavigationBarItem(
+           icon: Image.asset('assets/images/common-contact.png',width: 20.0,height: 20.0),
+           activeIcon: Image.asset('assets/images/active-contact.png',width: 20.0,height: 20.0),
+           label: '通信录'
+       ),
+       BottomNavigationBarItem(
+           icon: Image.asset('assets/images/common-found.png',width: 20.0,height: 20.0),
+           activeIcon: Image.asset('assets/images/active-found.png',width: 20.0,height: 20.0),
+           label: '发现'
+       ),
+       BottomNavigationBarItem(
+           icon: Image.asset('assets/images/my.png',width: 20.0,height: 20.0),
+           activeIcon: Image.asset('assets/images/active-my.png',width: 20.0,height: 20.0),
+           label: '我的'
+       ),
+  ];
+  int currentIndex = 0;
+  //  对应的widget
+  List<Widget>  appWidget= const [
+      Chat(), 
+      Contacts(), 
+      Found(), 
+      MyPage(), 
+  ];
+
+  // 新建一个滑动PageViewController
+  late PageController  pageController;
+
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    pageController = PageController(initialPage: currentIndex);
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+          body: PageView.builder(
+            itemCount:appWidget.length,
+            controller:pageController,
+            itemBuilder:(context,index){//这个builder 是按需加载
+              return appWidget.elementAt(index);
+            },
+            onPageChanged: (index){
+                setState(() {
+                  currentIndex =index;
+                });
+             },
+            ),
+          bottomNavigationBar: BottomNavigationBar(
+            selectedItemColor:AppColor.primaryColor,
+            selectedFontSize:12.0,
+            type: BottomNavigationBarType.fixed,//让label文字显示出来
+            currentIndex:currentIndex,
+            items:bottomNavigationBarItem,
+            onTap: (index){
+               setState(() {
+                 currentIndex = index;
+               });
+               //点击时候也让其滑动到指定的页面
+               pageController.animateToPage(index, duration: const Duration(milliseconds: 3), curve:Curves.ease );
+            },
+          ),
+    );
+  }
+}
