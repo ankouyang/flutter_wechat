@@ -13,7 +13,7 @@ dependencies:
   flutter_webview_plugin: ^0.4.0
   data_format: ^0.0.3
   cupertino_icons: ^1.0.2
-
+  syncfusion_flutter_charts: ^20.3.50
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -31,6 +31,15 @@ flutter:
    - assets/images/common-message.png
    - assets/images/my.png
    - assets/images/active-my.png
+   - assets/images/search.png
+   - assets/images/add.png
+   - assets/images/collection.png
+   - assets/images/friends.png
+   - assets/images/video.png
+   - assets/images/card.png
+   - assets/images/emo.png
+   - assets/images/operation.png
+   - assets/images/qrcode.png
 
   # fonts:
   #   - family: Schyler
