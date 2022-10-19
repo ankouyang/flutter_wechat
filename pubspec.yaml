@@ -40,6 +40,8 @@ flutter:
    - assets/images/emo.png
    - assets/images/operation.png
    - assets/images/qrcode.png
+   - assets/images/delete.png
+   - assets/images/clock.png
 
   # fonts:
   #   - family: Schyler
