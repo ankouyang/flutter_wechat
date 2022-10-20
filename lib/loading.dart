@@ -18,7 +18,8 @@ class _LoadingPageState extends State<LoadingPage> {
     Future.delayed(const Duration(seconds: 3),(){
         print('Flutter高仿微信程序启动.....');
 
-        Navigator.pushNamed(context, '/app');
+        // Navigator.pushNamed(context, '/app');
+      Navigator.pushReplacementNamed(context, '/app');
     });
   }
   @override

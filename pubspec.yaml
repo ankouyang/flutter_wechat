@@ -22,6 +22,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+   # 底部导航栏图标
    - assets/images/wechat_start.webp
    - assets/images/active-contact.png
    - assets/images/common-contact.png
@@ -31,6 +32,7 @@ flutter:
    - assets/images/common-message.png
    - assets/images/my.png
    - assets/images/active-my.png
+   # 搜素
    - assets/images/search.png
    - assets/images/add.png
    - assets/images/collection.png
@@ -42,6 +44,14 @@ flutter:
    - assets/images/qrcode.png
    - assets/images/delete.png
    - assets/images/clock.png
+   # 通信录
+   - assets/images/add-friends.png
+   - assets/images/contact-friends.png
+   - assets/images/group.png
+   - assets/images/tab.png
+   - assets/images/public.png
+   - assets/images/bussiness.png
+   - assets/images/xinbao.png
 
   # fonts:
   #   - family: Schyler

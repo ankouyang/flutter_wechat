@@ -20,7 +20,7 @@ final ThemeData  defaultTheme = ThemeData(
     ),
     appBarTheme:  const AppBarTheme(
       elevation: 0.0,
-      titleTextStyle: TextStyle(color: AppColor.primaryColor,fontWeight: FontWeight.bold),
+      titleTextStyle: TextStyle(color: AppColor.primaryColor,fontSize:18.0,fontWeight: FontWeight.bold),
       backgroundColor: AppColor.colorScheme,
       iconTheme: IconThemeData(
         color: AppColor.primaryColor
