@@ -10,7 +10,6 @@ class ContactItem extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.only(top: 5,left: 10,bottom: 5.0),
-      height: 55.0,
       decoration: const BoxDecoration(
           color: Colors.white,
           border:Border(bottom: BorderSide(width: 0.5,color: Color(0xffe4e4e4)))
@@ -25,11 +24,11 @@ class ContactItem extends StatelessWidget {
             ),
             child:ClipRRect(
                 borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-                child:isStaticImg?Image.asset('${contact.img}',width: 50.0,height:50.0,fit: BoxFit.contain):Image.network('${contact.img}',width: 55.0,height:55.0,fit: BoxFit.contain)
+                child:isStaticImg?Image.asset('${contact.img}',width: 50.0,height:50.0,fit: BoxFit.contain):Image.network('${contact.img}',width: 55.0,height:55.0,fit: BoxFit.fill)
             ),
           ),
           Container(
-            margin: const EdgeInsets.only(left: 10.0),
+            margin: const EdgeInsets.only(left: 8.0),
             constraints: const BoxConstraints(
                 maxWidth: 200.0
             ),
