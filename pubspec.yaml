@@ -54,6 +54,18 @@ flutter:
    - assets/images/bussiness.png
    - assets/images/xinbao.png
    - assets/images/qibao.png
+   # 发现
+   - assets/images/found_friend.png
+   - assets/images/found_video.png
+   - assets/images/found_living.png
+   - assets/images/found_scan.png
+   - assets/images/found_shake.png
+   - assets/images/found_look.png
+   - assets/images/found_search.png
+   - assets/images/found_recent.png
+   - assets/images/found_shop.png
+   - assets/images/found_games.png
+   - assets/images/found_mini.png
 
   # fonts:
   #   - family: Schyler

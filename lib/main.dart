@@ -44,7 +44,7 @@ void main(){
             '/app':(_)=>const App(),
             '/search':(_)=>const Search(),
             '/friends':(_)=> WebviewScaffold(
-              url:'https://winxin.qq.com/',
+              url:'https://weixin.qq.com/',
               appBar: AppBar(
                 title: const Text('微信朋友圈'),
               ),
