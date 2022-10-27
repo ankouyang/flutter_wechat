@@ -12,7 +12,7 @@ final ThemeData  defaultTheme = ThemeData(
     primaryColor: AppColor.primaryColor ,
     scaffoldBackgroundColor: AppColor.scaffoldBackgroundColor,
     cardColor:AppColor.cardColor,
-    colorScheme: const ColorScheme.light().copyWith(primary: AppColor.colorScheme),
+    colorScheme: const ColorScheme.light().copyWith(primary: AppColor.selectBottomBarValue),
     primarySwatch: AppColor.primarySwatchColor,
     buttonTheme: const ButtonThemeData(
         buttonColor: AppColor.primaryColor,

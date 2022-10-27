@@ -66,6 +66,10 @@ flutter:
    - assets/images/found_shop.png
    - assets/images/found_games.png
    - assets/images/found_mini.png
+   #发送消息
+   - assets/images/radio.png
+   - assets/images/message_add.png
+   - assets/images/mood.png
 
   # fonts:
   #   - family: Schyler

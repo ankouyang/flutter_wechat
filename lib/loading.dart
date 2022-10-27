@@ -30,6 +30,7 @@ class _LoadingPageState extends State<LoadingPage> {
       decoration: const BoxDecoration(
           image: DecorationImage(
             image:AssetImage('assets/images/wechat_start.webp'),
+            fit: BoxFit.fitHeight
             // fit: BoxFit.cover
 
           )
